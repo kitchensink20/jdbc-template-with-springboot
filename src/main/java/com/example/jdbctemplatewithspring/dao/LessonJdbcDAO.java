@@ -1,16 +1,19 @@
 package com.example.jdbctemplatewithspring.dao;
 
 import com.example.jdbctemplatewithspring.model.Lesson;
+import jakarta.persistence.Entity;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Component;
 
 import java.sql.PreparedStatement;
 import java.util.List;
 import java.util.Optional;
 
+@Component
 public class LessonJdbcDAO implements DAO<Lesson> {
     private final JdbcTemplate jdbcTemplate;
 
