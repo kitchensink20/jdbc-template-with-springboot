@@ -23,7 +23,14 @@ public class Lesson {
         this.classNumber = classNumber;
     }
 
-    public Lesson() { }
+    public Lesson( String subjectName, int professorId, String weekDay, int classNumber) {
+        this.professorId = professorId;
+        this.subjectName = subjectName;
+        this.weekDay = weekDay;
+        this.classNumber = classNumber;
+    }
+    
+    public Lesson(){}
 
     public int getLessonId() {
         return lessonId;
